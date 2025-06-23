@@ -25,7 +25,6 @@ graph TB
         D[Block Crawler]
         E[Transaction Processor]
         F[Event Handler]
-        G[Smart Contract Indexer]
     end
     
     subgraph "Specialized Services"
@@ -33,6 +32,8 @@ graph TB
         I[CosmWasm Module]
         J[IBC Module]
         K[Governance Module]
+        G[Feegrant Module]
+        ...
     end
     
     subgraph "Data Layer"
@@ -53,19 +54,10 @@ graph TB
     E --> F
     F --> G
     
-    G --> H
-    G --> I
-    G --> J
-    G --> K
-    
-    H --> L
-    I --> L
-    J --> L
-    K --> L
-    
-    E --> M
-    L --> N
-    N --> O
+    F --> H
+    F --> I
+    F --> J
+    F --> K
 ```
 
 ## 🚀 Các dịch vụ được hỗ trợ
